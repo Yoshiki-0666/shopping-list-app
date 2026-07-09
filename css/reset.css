@@ -1,0 +1,40 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+button,
+input {
+  color: inherit;
+  font: inherit;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+input {
+  min-width: 0;
+  border: 0;
+  outline: 0;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--color-selected-text);
+  outline-offset: 2px;
+}
