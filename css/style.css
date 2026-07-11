@@ -21,9 +21,9 @@
   --font-header-title: 18px;
   --font-section-title: 14px;
   --font-product-name: 18px;
-  --font-body: 12px;
+  --font-body: 14px;
   --font-button: 16px;
-  --font-label: 8px;
+  --font-label: 12px;
   --space-screen-x: 16px;
   --space-section-gap: 20px;
   --space-list-gap: 18px;
@@ -604,37 +604,51 @@ button {
 }
 
 .dialog {
-  width: 238px;
-  min-height: 118px;
-  padding: 16px;
+  width: min(352px, calc(100vw - 32px));
+  height: 136px;
+  padding: 15px;
   display: flex;
   flex-direction: column;
   gap: 16px;
+  overflow: hidden;
   background: var(--color-surface);
   border: 1px solid var(--color-dialog-border);
   border-radius: var(--radius-dialog);
 }
 
 .dialog__message {
-  font-size: var(--font-body);
+  width: 100%;
+  flex: 0 0 auto;
+  color: var(--color-text);
+  font-size: 16px;
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 24px;
+  letter-spacing: 0.0704px;
   text-align: center;
 }
 
 .dialog__actions {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: 40px;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
   gap: 8px;
 }
 
 .dialog__button {
-  height: 34px;
+  height: 40px;
+  min-width: 0;
+  padding: 10px;
+  flex: 1 1 0;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-button);
   background: #fff;
   font-size: 14px;
   font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.0704px;
+  text-align: center;
 }
 
 .dialog__button--complete {
